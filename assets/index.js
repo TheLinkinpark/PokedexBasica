@@ -4,6 +4,7 @@ const input = document.getElementById("pokemonInput");
 const btn = document.getElementById("buscarBtn");
 const imgFront = document.getElementById("pokeImgFr");
 const imgBack = document.getElementById("pokeImgBack");
+const nombrepoke = document.getElementById("nombre");
 
 const limpiar = () => {
     statsList.innerHTML = "";
@@ -20,6 +21,7 @@ btn.addEventListener("click", () => {
         const cries = data.cries.latest;
         const sprite_back = data.sprites.back_default;
         const sprite_front = data.sprites.front_default;
+        const name = data.name;
    
 
         stats.forEach((stat) => {
@@ -31,6 +33,7 @@ btn.addEventListener("click", () => {
         ruido.src = cries;
         pokeImgFr.src = sprite_front;
         pokeImgBack.src = sprite_back;
+        nombre.textContent = name.toUpperCase();
 
         
       })

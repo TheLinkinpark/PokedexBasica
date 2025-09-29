@@ -40,6 +40,11 @@ body {
 
 img {
     width: 150px;
+    line-height: 150px;
+}
+
+#images {
+  background-color: white;
 }
 
 header, div {
