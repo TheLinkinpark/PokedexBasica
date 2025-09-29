@@ -7,6 +7,13 @@ body {
 
 }
 
+.content {
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 20px;
+  background: linear-gradient(to left, #ffc34a, #fce9b6);;
+}
+
 .tablita {
     max-width: 100%;
     padding: 10px;
@@ -28,7 +35,7 @@ body {
     border-collapse: collapse;
     padding: 3px;
     text-align: center;
-    background-color: rgb(215, 228, 100);
+    background-color: rgb(228, 215, 100);
 }
 
 img {
