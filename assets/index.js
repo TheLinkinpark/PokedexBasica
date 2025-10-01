@@ -6,6 +6,8 @@ const imgFront = document.getElementById("pokeImgFr");
 const imgBack = document.getElementById("pokeImgBack");
 const nombrepoke = document.getElementById("nombre");
 
+const tablaEstadisticas = document.querySelector("#tablaStats")
+
 const limpiar = () => {
     statsList.innerHTML = "";
 }
@@ -22,18 +24,22 @@ btn.addEventListener("click", () => {
         const sprite_back = data.sprites.back_default;
         const sprite_front = data.sprites.front_default;
         const name = data.name;
+        
+
    
 
         stats.forEach((stat) => {
-          const statLi = document.createElement("li");
-          statLi.textContent = `${stat.stat.name}: ${stat.base_stat}`;
-          statsList.appendChild(statLi);
+          const fila = document.createElement("td");
+          fila.textContent = ` ${stat.base_stat}`;
+          tablaEstadisticas.appendChild(fila);
         });
 
         ruido.src = cries;
         pokeImgFr.src = sprite_front;
         pokeImgBack.src = sprite_back;
         nombre.textContent = name.toUpperCase();
+
+        tipo.textContent = type;
 
         
       })
