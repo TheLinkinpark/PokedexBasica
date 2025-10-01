@@ -1,4 +1,3 @@
-const statsList = document.getElementById("stats");
 const ruido = document.getElementById("ruido");
 const input = document.getElementById("pokemonInput");
 const btn = document.getElementById("buscarBtn");
