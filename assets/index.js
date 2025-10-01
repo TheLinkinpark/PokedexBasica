@@ -8,7 +8,7 @@ const nombrepoke = document.getElementById("nombre");
 const tablaEstadisticas = document.querySelector("#tablaStats")
 
 const limpiar = () => {
-    statsList.innerHTML = "";
+    tablaEstadisticas.innerHTML = "";
 }
 
 btn.addEventListener("click", () => {
@@ -25,12 +25,20 @@ btn.addEventListener("click", () => {
         const name = data.name;
         
 
-   
+ 
+        
+
 
         stats.forEach((stat) => {
+          const row = document.createElement("tr");
           const fila = document.createElement("td");
           fila.textContent = ` ${stat.base_stat}`;
-          tablaEstadisticas.appendChild(fila);
+          
+          const nombreStat = document.createElement("th");
+          statNameCell.textContent = stat.stat.name;
+          row.appendChild(nombreStat);
+          row.appendChild(fila);
+          tablaEstadisticas.appendChild(row);
         });
 
         ruido.src = cries;
