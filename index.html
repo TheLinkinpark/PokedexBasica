@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/index.css">
     <title>Pokedex</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div>
-        <h1 id="tituPokedex">Pokédex</h1>
+        <h1 id="tituPokedex" class="press-start-2p-regular">Pokédex</h1>
         <input type="text" id="pokemonInput" placeholder="Escribe para buscar un pokémon">
         <button id="buscarBtn">Buscar</button>
     </div>
 
+    <div>
+        <p id="textoError"></p>
+    </div>
+
     <div class="content">
 
-            <h2 id="nombre"></h2>
+            <h2 id="nombre" class="press-start-2p-regular"></h2>
 
             <div id="images">
                 <img id="pokeImgFr" src="" alt="delante"/>
@@ -30,7 +38,7 @@
 
             
             <div class="tablita">
-                <h2>Estadísticas</h2>
+                <h2 class="press-start-2p-regular">ESTADÍSTICAS</h2>
                 <table id="tablaStats">
                 <tr>
                     <th>Tipo</th>
@@ -68,7 +76,7 @@
             </div>
 
             <div>
-                <h2>Grito</h2>
+                <h2 class="press-start-2p-regular">GRITO</h2>
             </div>
 
             <div class="audio-cont">

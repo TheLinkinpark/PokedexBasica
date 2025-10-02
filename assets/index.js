@@ -6,11 +6,17 @@ const imgBack = document.getElementById("pokeImgBack");
 const nombrepoke = document.getElementById("nombre");
 const tipo = document.getElementById("tipo");
 const peso = document.getElementById("peso");
+const textError = document.getElementById("textoError");
 
-const tablaEstadisticas = document.querySelector("#tablaStats")
+const tablaEstadisticas = document.querySelector("#tablaStats");
+
+const limpiar = () => {
+    textError.innerHTML = "";
+}
 
 btn.addEventListener("click", () => {
     const pokemon = input.value.trim().toLowerCase();
+    limpiar();
 
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
       .then((response) => response.json())
@@ -52,6 +58,9 @@ btn.addEventListener("click", () => {
 
         
       })
-      .catch((error) => console.error("Error al obtener los datos: ", error));
+      .catch((error) => {
+        console.error("Error al obtener los datos: ", error);
+        textError.textContent = "Ha habido un error en la búsqueda, vuelva a intentarlo";
+      })
 });
 
