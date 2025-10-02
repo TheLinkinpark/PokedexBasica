@@ -5,40 +5,42 @@ const imgFront = document.getElementById("pokeImgFr");
 const imgBack = document.getElementById("pokeImgBack");
 const nombrepoke = document.getElementById("nombre");
 
-const tablaEstadisticas = document.querySelector("#tablaStats")
+// STATS
+const tipo = document.getElementById("tipo");
+const peso = document.getElementById("peso");
 
-const limpiar = () => {
-    tablaEstadisticas.innerHTML = "";
-}
+const tablaEstadisticas = document.querySelector("#tablaStats")
 
 btn.addEventListener("click", () => {
     const pokemon = input.value.trim().toLowerCase();
-            limpiar();
 
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
       .then((response) => response.json())
       .then((data) => {
-        const stats = data.stats;
         const cries = data.cries.latest;
         const sprite_back = data.sprites.back_default;
         const sprite_front = data.sprites.front_default;
         const name = data.name;
+        const type = data.types.map(t => t.type.name);
+        const weight = data.weight;
         
 
- 
-        
+        data.stats.forEach((stat) => {
+            switch(stat.stat.name) {
+              case 'hp':
+                document.getElementById('vida').textContent = stat.base_stat;
+              case 'attack':
+                document.getElementById('ataque').textContent = stat.base_stat;
+              case 'defense':
+                document.getElementById('defensa').textContent = stat.base_stat;
+              case 'special-attack':
+                document.getElementById('ataEspecial').textContent = stat.base_stat;
+              case 'special-defense':
+                document.getElementById('defEspecial').textContent = stat.base_stat;
+              case 'speed':
+                document.getElementById('velocidad').textContent = stat.base_stat;
+            }
 
-
-        stats.forEach((stat) => {
-          const row = document.createElement("tr");
-          const fila = document.createElement("td");
-          fila.textContent = ` ${stat.base_stat}`;
-          
-          const nombreStat = document.createElement("th");
-          statNameCell.textContent = stat.stat.name;
-          row.appendChild(nombreStat);
-          row.appendChild(fila);
-          tablaEstadisticas.appendChild(row);
         });
 
         ruido.src = cries;
@@ -47,6 +49,7 @@ btn.addEventListener("click", () => {
         nombre.textContent = name.toUpperCase();
 
         tipo.textContent = type;
+        peso.textContent = weight;
 
         
       })
