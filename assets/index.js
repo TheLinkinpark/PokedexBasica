@@ -4,8 +4,6 @@ const btn = document.getElementById("buscarBtn");
 const imgFront = document.getElementById("pokeImgFr");
 const imgBack = document.getElementById("pokeImgBack");
 const nombrepoke = document.getElementById("nombre");
-
-// STATS
 const tipo = document.getElementById("tipo");
 const peso = document.getElementById("peso");
 
@@ -25,6 +23,7 @@ btn.addEventListener("click", () => {
         const weight = data.weight;
         
 
+        // Añado las estadísticas a la tabla
         data.stats.forEach((stat) => {
             switch(stat.stat.name) {
               case 'hp':

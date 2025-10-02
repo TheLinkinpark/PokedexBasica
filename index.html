@@ -9,32 +9,19 @@
 <body>
 
     <div>
-        <h2>Pokédex</h2>
+        <h1 id="tituPokedex">Pokédex</h1>
         <input type="text" id="pokemonInput" placeholder="Escribe para buscar un pokémon">
         <button id="buscarBtn">Buscar</button>
     </div>
 
     <div class="content">
 
-
-
             <h2 id="nombre"></h2>
+
             <div id="images">
                 <img id="pokeImgFr" src="" alt="delante"/>
                 <img id="pokeImgBack" src="" alt="atrás"/>
                 
-            </div>
-
-            <div>
-                <h2>Sonido</h2>
-            </div>
-
-            <div class="audio-cont">
-        
-                <audio controls id="ruido">
-                    <source src="./assets/videos/cries_pokemon_latest_155.ogg" type="audio/ogg">
-                    Tu navegador no soporta audio.
-                </audio>
             </div>
 
             <div>
@@ -78,6 +65,18 @@
                 </tr>
 
             </table>
+            </div>
+
+            <div>
+                <h2>Grito</h2>
+            </div>
+
+            <div class="audio-cont">
+        
+                <audio controls id="ruido">
+                    <source src="./assets/videos/cries_pokemon_latest_155.ogg" type="audio/ogg">
+                    Tu navegador no soporta audio.
+                </audio>
             </div>
     </div>
     

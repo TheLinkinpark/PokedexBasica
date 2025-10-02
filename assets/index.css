@@ -1,17 +1,28 @@
+@font-face {
+  font-family: 'PokemonSolid';
+  src: url('fonts/PokemonSolid.ttf') format('truetype');
+}
+
+
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background: linear-gradient(to right, #fad586, #fce9b6);
-    /*background-color: rgb(245, 222, 161);*/
+    background: linear-gradient(to bottom, #ede6cb, #e9dcd6);
     width: 50%;
     margin: auto;
 
+}
+
+#tituPokedex {
+    font-family: 'PokemonSolid', sans-serif;
+  color: #ffcb05;
+  text-shadow: 2px 2px #3d7dca;
 }
 
 .content {
   border: 1px solid black;
   border-radius: 20px;
   margin: 20px;
-  background: linear-gradient(to left, #ffc34a, #fce9b6);;
+  background: linear-gradient(to bottom, #ff534a, #fcccb6);
 }
 
 .tablita {
@@ -35,24 +46,26 @@ body {
     border-collapse: collapse;
     padding: 3px;
     text-align: center;
-    background-color: rgb(228, 215, 100);
+    background-color: rgb(252, 182, 157);
 }
 
 img {
-    width: 150px;
-    line-height: 150px;
+    width: 200px;
+    line-height: 200px;
 }
 
 #images {
-  background-color: rgb(226, 200, 54);
+  width: 70%;
+  margin: auto;
+  border: 1px solid black;
+  background: linear-gradient(to bottom, #86d7fa, #b6d9fc);
   border-radius: 20px;
-  margin: 10px;
+  
 }
 
 header, div {
     text-align: center;
 }
-
 
 .audio-cont {
   display: flex;
@@ -63,6 +76,12 @@ header, div {
 .audio-container audio {
   width: 100%;
   max-width: 400px; 
+}
+
+input[type=text] {
+  width: 215px;
+  border: 1px solid black;
+  border-radius: 8px;
 }
 
 
