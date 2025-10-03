@@ -15,10 +15,14 @@
   font-style: normal;
 }
 
+#todo {
+padding-top: 70px;
+}
+
 
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background: linear-gradient(to bottom, #ede6cb, #e9dcd6);
+    background-color: #fdf8e3;
     width: 50%;
     margin: auto;
 
@@ -79,7 +83,7 @@ header, div {
     text-align: center;
 }
 
-.audio-cont {
+#audio-cont {
   display: flex;
   justify-content: center;
   padding: 10px;

@@ -12,81 +12,83 @@
 </head>
 <body>
 
-    <div>
-        <h1 id="tituPokedex" class="press-start-2p-regular">Pokédex</h1>
-        <input type="text" id="pokemonInput" placeholder="Escribe para buscar un pokémon">
-        <button id="buscarBtn">Buscar</button>
-    </div>
+    <div id="todo">
+        <div>
+            <h1 id="tituPokedex" class="press-start-2p-regular">Pokédex</h1>
+            <input type="text" id="pokemonInput" placeholder="Escribe para buscar un pokémon">
+            <button id="buscarBtn">Buscar</button>
+        </div>
 
-    <div>
-        <p id="textoError"></p>
-    </div>
+        <div>
+            <p id="textoError"></p>
+        </div>
 
-    <div class="content">
+        <div class="content">
 
-            <h2 id="nombre" class="press-start-2p-regular"></h2>
+                <h2 id="nombre" class="press-start-2p-regular">CYNDAQUIL</h2>
 
-            <div id="images">
-                <img id="pokeImgFr" src="" alt="delante"/>
-                <img id="pokeImgBack" src="" alt="atrás"/>
-                
-            </div>
+                <div id="images">
+                    <img id="pokeImgFr" src="assets/photos/front.png" alt="front"/>
+                    <img id="pokeImgBack" src="assets/photos/155.png" alt="back"/>
+                    
+                </div>
 
-            <div>
-        
-            </div>
-
+                <div>
             
-            <div class="tablita">
-                <h2 class="press-start-2p-regular">ESTADÍSTICAS</h2>
-                <table id="tablaStats">
-                <tr>
-                    <th>Tipo</th>
-                    <td id="tipo"></td>
+                </div>
 
-                    <th>Ataque especial</th>
-                    <td id="ataEspecial"></td>
-                <tr>
-                <tr>
-                    
-                    
-                </tr>
-                    <th>Vida</th>
-                    <td id="vida"></td>
+                <div class="tablita">
+                    <h2 class="press-start-2p-regular">ESTADÍSTICAS</h2>
+                    <table id="tablaStats">
+                    <tr>
+                        <th>Tipo</th>
+                        <td id="tipo">Fuego</td>
 
-                    <th>Defensa especial</th>
-                    <td id="defEspecial"></td>
-                </tr>    
+                        <th>Ataque especial</th>
+                        <td id="ataEspecial">60</td>
+                    <tr>
+                    <tr>
+                        
+                        
+                    </tr>
+                        <th>Vida</th>
+                        <td id="vida">39</td>
 
-                <tr>
-                    <th>Ataque</th>
-                    <td id="ataque"></td>
+                        <th>Defensa especial</th>
+                        <td id="defEspecial">50</td>
+                    </tr>    
 
-                    <th>Velocidad</th>
-                    <td id="velocidad"></td>
-                </tr>
-                    <th>Defensa</th>
-                    <td id="defensa"></td>
+                    <tr>
+                        <th>Ataque</th>
+                        <td id="ataque">52</td>
 
-                    <th>Peso</th>
-                    <td id="peso"></td>
-                </tr>
+                        <th>Velocidad</th>
+                        <td id="velocidad">65</td>
+                    </tr>
+                        <th>Defensa</th>
+                        <td id="defensa">43</td>
 
-            </table>
-            </div>
+                        <th>Peso</th>
+                        <td id="peso">79</td>
+                    </tr>
 
-            <div>
-                <h2 class="press-start-2p-regular">GRITO</h2>
-            </div>
+                </table>
+                </div>
 
-            <div class="audio-cont">
-        
-                <audio controls id="ruido">
-                    <source src="./assets/videos/cries_pokemon_latest_155.ogg" type="audio/ogg">
-                    Tu navegador no soporta audio.
-                </audio>
-            </div>
+                <div>
+                    <h2 class="press-start-2p-regular">GRITO</h2>
+                </div>
+
+                <div id="audio-cont">
+            
+                    <audio controls id="ruido">
+                        <source src="./assets/videos/cries_pokemon_latest_155.ogg" type="audio/ogg">
+                        Tu navegador no soporta audio.
+                    </audio>
+                </div>
+        </div>
     </div>
+    
     
 <script src="./assets/index.js" defer></script>
 </body>
