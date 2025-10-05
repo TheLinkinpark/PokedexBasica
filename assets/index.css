@@ -19,12 +19,11 @@
 }
 
 
-#todo {
-padding-top: 60px;
-}
-
 
 body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: #fdf8e3;
     width: 50%;
